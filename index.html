@@ -1,1 +1,154 @@
-Hey world
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The personal website of Ricky Richards">
+  <meta name="author" content="Ricky Richards">
+  <meta name="generator" content="Jekyll">
+
+  <title>Ricky Richards</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./assets/js/worldclock.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link href="./assets/css/style.css?cacheSplash=" rel="stylesheet">
+
+</head>
+<body>
+
+  <div id="intro">
+    <div class="row no-gutters">
+      <div class="col-8" id="intro-left">
+        <div class="row no-gutters" id="intro-left-nest">
+          <div class="col-8 col-sm-7">
+
+          </div>
+          <div class="col-4 col-sm-5">
+
+              <div id="title-holder">
+                  <h1>
+                      <span class="version">
+                        <span class="text-wrapper">
+
+                          <span class="design-type">
+                            <span class="design-type__item">Product</span>
+                            <span class="design-type__item swap">Brand</span>
+                            <span class="design-type__item swap">Web</span>
+                            <span class="design-type__item swap">Fashion</span>
+                            <span class="design-type__item swap">Campaign</span>
+                            <span class="design-type__item swap">Graphic</span>
+                          </span>
+
+                        </span>
+                        <span class="text-cover"></span>
+                      </span>
+                    <span class="text-wrapper">Designer</span>
+                    <span class="text-cover second-word"></span>
+                  </h1>
+              </div>
+
+            <div class="headshot">
+              <span class="helper"></span><div class="cover"></div><div class="img"></div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4" id="intro-right">
+
+          <span class="helper"></span>
+          <div class="time-wrapper">
+            <div>
+              <p><strong>London: </strong><span id="londonTime"></span></p>
+              <p><strong>San Francisco: </strong><span id="sanFranciscoTime"></span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6" id="further-info">
+        <p class="fadeIn">Hello! Welcome to my digital home.</p>
+        <p class="fadeIn">My name is <span class="link-1"><a href="https://www.linkedin.com/in/rickyrichards/">Ricky Richards</a></span>. I'm a <span class="link-1"><a href="http://www.rickyrichards.work">designer</a></span> with over ten years experience as a creator and business consultant.</p>
+        <p class="fadeIn">I started my career working at many of London’s leading advertising agencies and start-ups, where I was responsible for creating campaigns and strategic ideas for countless brands and fortune 500 companies.</p>
+        <p class="fadeIn">Thanks to these experiences I developed a keen interest in business, technology, strategy, psychology and philosophy that inform my work to this day.</p>
+        <p class="fadeIn">I continue to work as a creative and consultant while pursuing many self-driven projects including a <span class="link-1"><a href="https://itunes.apple.com/gb/podcast/ricky-richards-represents/id1129436221?mt=2">podcast</a></span>, university <span class="link-1"><a href="">lectures</a></span>, <span class="link-1"><a href="">workshops</a></span>, the publication of <span class="link-1"><a href="https://medium.com/@MrRickyRichards">articles</a></span> as well as the creation of several <span class="link-1"><a href="https://dailydesign.club">online tools</a></span> and <span class="link-1"><a href="https://native.bb">brands</a></span>.</p>
+        <p class="fadeIn">I can be reached by <span class="link-1"><a href="mailto:hello@rickyrichards.com">email</a></span>, or through my weekly <span class="link-1"><a href="https://rickyrichards.us14.list-manage.com/subscribe?u=ebdce74eec000e8b3c27efa8f&id=0750481d63">newsletter</a></span>.</p>
+
+        <tr>
+        <td><span id="GMT"></span></td>
+        <td><span id="SanFrancisco"></span></td>
+        <td><span id="London"></span></td>
+        </tr>
+
+    </div>
+  </div>
+
+  <div id="footer" class="cont">
+  </div>
+
+  <script>
+
+    $( document ).ready(function() {
+
+        worldClockZone();
+        TweenMax.to(".time-wrapper", 0.4, {opacity:1, ease: Power4.easeInOut, delay: 0.0});
+
+        TweenMax.to("#intro-left-nest", 2.0, {width:'100%', ease: Power4.easeInOut, delay: 0.2});
+        $( "#intro-left-nest .img" ).delay( 1500 ).css('display','inline-block');
+        //ABOVE ----TweenMax.to("#intro-left-nest .img", 0.0, {display:'inline-block', delay: 1.5});
+        //TweenMax.to("#intro-left-nest .img", 0.0, {backgroundPositionX:0, ease: Power4.easeInOut, delay: 1.5});
+        //TweenMax.to("#intro-left-nest .cover", 0.8, {width:'0%', ease: Power2.easeInOut, delay: 2.3});
+        TweenMax.to("#intro-left-nest .img", 0.8, {backgroundPositionX:0, ease: Power2.easeInOut, delay: 1.5});
+        TweenMax.to("#intro-left-nest .cover", 0.8, {scaleX:0, transformOrigin:"left", ease: Power4.easeInOut, delay: 1.5});
+        $( "#title-holder" ).delay( 2100 ).css('display','inline-block');
+        //ABOVE ----TweenMax.to("#title-holder", 0.0, {display:'inline-block', delay: 2.1});
+        //TweenMax.to("#title-holder", 0.2, {opacity:'1', ease: Power2.easeInOut, delay: 3.3});
+        TweenMax.to("#title-holder .version .text-cover", 0.4, {width:'109%', ease: Power2.easeIn, delay: 2.1});
+        TweenMax.to("#title-holder .second-word", 0.4, {width:'109%', ease: Power2.easeOut, delay: 2.5});
+        //----- using Tween for the mo... Jquery alt TBC: $( ".text-wrapper" ).delay( 2700 ).css('visibility','visible');
+        TweenMax.to(".text-wrapper", 0.0, {visibility:'visible', delay: 2.7});
+        TweenMax.to("#title-holder .version .text-cover", 0.4, {scaleX:0, transformOrigin:"right", ease: Power2.easeIn, delay: 3.0});
+        TweenMax.to("#title-holder .second-word", 0.4, {scaleX:0, transformOrigin:"right", ease: Power2.easeOut, delay: 3.4});
+
+        TweenMax.to(".version", 0.0, {height:'1.25em',overflowX:'hidden', delay: 3.8});
+        TweenMax.to(".swap", 0.0, {display:'block', delay: 3.8});
+        TweenMax.to(".design-type__item", 0.0, {animationName:'change', delay: 4.0});
+
+    });
+
+
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    // loop through all elements
+    $('.fadeIn').each(function() {
+
+      // build a tween
+      var tween = TweenMax.from($(this), 0.7, {autoAlpha: 0, y: '+=50', ease:Linear.easeNone});
+
+      // build a scene
+      var scene = new ScrollMagic.Scene({
+        triggerElement: this
+      })
+      .setTween(tween) // trigger a TweenMax.to tween
+      .triggerHook(0.95)
+      .reverse(false)
+      //.addIndicators()
+      .addTo(controller);
+
+    });
+
+
+  </script>
+
+</body>
+</html>
